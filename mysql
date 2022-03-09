@@ -1,8 +1,11 @@
+CREATE DATABASE election;
+USE election;
+
 CREATE TABLE candidates (
-id INTEGER AUTO_INCREMENT PRIMARY KEY,
-first_name VARCHAR(30) NOT NULL,
-last_name VARCHAR(30) NOT NULL,
-industry_connected BOOLEAN NOT NULL
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  industry_connected BOOLEAN NOT NULL
 );
 
 SELECT * FROM candidates;
@@ -18,3 +21,7 @@ VALUES ('Ronald', 'Firbank', 1),
 ('Octavia', 'Butler', 1),
 ('Unica', 'Zurn', 1);
 DESCRIBE candidates;
+
+SELECT first_name, industry_connected
+FROM candidates
+WHERE industry_connected = 1;
