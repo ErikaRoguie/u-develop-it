@@ -39,5 +39,6 @@
             "database": "Election",
             "username": "erikalsanders@msn.com"
         }
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
