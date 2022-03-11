@@ -1,3 +1,8 @@
+CREATE TABLE parties (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  description TEXT
+);
 INSERT INTO candidates (first_name, last_name, industry_connected)
 VALUES
   ('Ronald', 'Firbank', 1),

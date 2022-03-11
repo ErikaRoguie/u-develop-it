@@ -70,6 +70,11 @@ app.get('/api/candidates', (req, res) => {
       message: 'success',
       data: rows
     });
+    const sql = `SELECT candidates.*, parties.name 
+              AS party_name 
+              FROM candidates 
+              LEFT JOIN parties 
+              ON candidates.party_id = parties.id`;
   });
 });
 
@@ -87,6 +92,12 @@ app.get('/api/candidate/:id', (req, res) => {
       message: 'success',
       data: row
     });
+
+    const sql = `SELECT candidates.*, parties.name 
+              AS party_name 
+              FROM candidates 
+              LEFT JOIN parties 
+              ON candidates.party_id = parties.id`;
   });
 });
 
